@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/uperview_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/uperobject">
+
+        <TextView
+            android:id="@+id/debug_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Hello Minou !"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_rwibt"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignBottom="@+id/uperview_white"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/rwibt" />
+
+    <LinearLayout
+        android:id="@+id/lin_lyt_connect_to_robot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="375dp"
+        android:background="@drawable/button_connect"
+        android:clickable="true"
+
+        android:orientation="horizontal" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_connecting_to_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin_lyt_connect_to_robot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/white"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frame_lyt_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_mode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/myLinearLayout_camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/vision_button"
+            android:orientation="vertical" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/switch_mode_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_lyt_connect_to_robot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Switch Mode"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_mode_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <FrameLayout
+        android:id="@+id/frame_lyt_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switch_mode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/myLinearLayout_voice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/voice"
+            android:orientation="vertical" />
+
+
+    </FrameLayout>
+</RelativeLayout>
